@@ -1,6 +1,6 @@
 Name:           perl-Test-MockObject
 Version:        1.09
-Release:        3.1%{?dist}
+Release:        4%{?dist}
 Summary:        Perl extension for emulating troublesome interfaces
 
 Group:          Development/Libraries
@@ -10,8 +10,11 @@ Source0:        http://www.cpan.org/authors/id/C/CH/CHROMATIC/Test-MockObject-%{
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
+BuildRequires:  perl(CGI)
 BuildRequires:  perl(Module::Build)
+BuildRequires:  perl(Test::Builder)
 BuildRequires:  perl(Test::Exception)
+BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Test::Pod), perl(Test::Pod::Coverage)
 BuildRequires:  perl(UNIVERSAL::can) >= 1.11
 BuildRequires:  perl(UNIVERSAL::isa) >= 0.06
@@ -57,6 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue May 07 2013 Petr Pisar <ppisar@redhat.com> - 1.09-4
+- Declare all build-time dependencies provided by a separate package
+  (Resolves: rhbz#661804)
+
 * Thu Dec 03 2009 Dennis Gregorovic <dgregor@redhat.com> - 1.09-3.1
 - Rebuilt for RHEL 6
 
