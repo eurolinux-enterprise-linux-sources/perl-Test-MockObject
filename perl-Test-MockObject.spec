@@ -1,6 +1,6 @@
 Name:           perl-Test-MockObject
 Version:        1.20120301
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Perl extension for emulating troublesome interfaces
 Group:          Development/Libraries
 License:        GPL+ or Artistic
@@ -49,6 +49,9 @@ PERL_RUN_ALL_TESTS=1 make test
 %{_mandir}/man3/*.3pm*
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.20120301-3
+- Mass rebuild 2013-12-27
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.20120301-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
